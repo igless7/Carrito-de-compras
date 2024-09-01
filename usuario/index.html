@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi tienda</title>
+    <!-- Bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" type="text/css" />
+    <!-- tipografia Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tipografia nunito sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="main-menu">
+        <a href="index.html" id="nav_index"
+          ><h2 class="nav_logo" id="nav_logo">Loui Botin</h2></a
+        >
+        <!-- <img src="/src/assets/shopping-cart.png" alt="carrito-compras-icon" class="carrito cart-fixed"> -->
+        <a href="cart.html">
+          <div class="cart">
+            <i class="bi bi-cart2"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+          </div>
+        </a>
+      </div>
+      <button class="abrir-menu" onclick="abrirMenu()" id="abrir">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+
+        <ul class="nav_links">
+          <li class="nav_items" id="cart-pago">
+            <img
+              src="/src/assets/shopping-cart.png"
+              alt="carrito-compras-icon"
+              class="carrito"
+            />
+            Pago
+          </li>
+
+          <li class="nav_items">Acerca de</li>
+          <li class="nav_items">
+            Politicas &<span
+              ><br />
+              servicios</span
+            >
+          </li>
+
+          <li class="nav_items">Contacto</li>
+        </ul>
+        <!-- menu hamburguesa -->
+        <!-- <a href="#nav" class="nav_hamburger">
+                <img src="../src/assets/menu.svg" alt="abrir-menu-icon" class="nav_icon">
+            </a>
+
+            <a href="#" class="nav_close">
+                <img src="../src/assets/close.svg" alt="cerrar-menu-icon" class="nav_icon">
+            </a> -->
+      </nav>
+    </header>
+    <div class="contenedorProductos">
+      <h2>Productos</h2>
+      <div class="mostrarProductos" id="mostrarProductos"></div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

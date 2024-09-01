@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #141C29;
+    color:#fff;
+}
+
+header{
+    font-family: 'Space Grotesk, sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f1621;
+    padding: 2rem;
+}
+
+.main-menu{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+        gap: 45px;
+}
+#nav_logo{
+    color:#fff;
+    font-family: 'Cinzel, sans-serif';
+    font-size: 25px;
+}
+.carrito {
+    filter: invert(100%);
+    width: 45px;
+    height: auto;
+}
+
+.container > div > h2 {
+    font-size: 20px;
+    color: yellowgreen;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px auto 45px auto;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container>div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #2D4263;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding-top: 35px;
+    gap: 25px;
+    flex: 1 1 300px;
+}
+
+.container>div>form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container>div>form>input,
+select {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: black;
+}
+option{
+    color: black;
+}
+
+.container .button {
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    color: black;
+}
+
+.container .button:hover {
+    font-weight:700;
+    border: 1px solid #0f1621;
+}
+
+.contenedorProducto{
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.contenedorProductos h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+
+.mostrarProductos {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+    
+}
+
+.mostrarProductos>div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #2D4263;
+    border-radius: 20px;
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacion>p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contenedorMensaje {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    height: 70px;
+}
+/* errores */
+.repetidoError,
+.realizado,
+.llenarCampos,
+.noExsiteError {
+    margin: 15px 0px;
+}
+
+.llenarCampos::after,
+.noExsiteError::after,
+.repetidoError::after,
+.realizado::after {
+    background-color: red;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.realizado::after {
+    content: 'Realizado';
+    background-color: green;
+}
+
+.repetidoError::after {
+    content: 'Este elemento ya existe';
+}
+
+.llenarCampos::after {
+    content: 'Por favor compruebe que todos los campos estan llenos';
+}
+
+.noExsiteError::after {
+    content: 'Este elemento no existe';
+}
