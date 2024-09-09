@@ -28,6 +28,11 @@ header{
     justify-content: flex-end;
         gap: 45px;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
 #nav_logo{
     color:#fff;
     font-family: 'Cinzel, sans-serif';
