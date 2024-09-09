@@ -1,4 +1,6 @@
 
+
+
 //document.addEventListener("DOMContentLoaded", function () {
   //Guardar datos en localStorage
   function guardarAlmacenamientoLocal(clave, dato) {
@@ -66,8 +68,10 @@
       setTimeout(() => {
         mensaje.classList.remove("realizado");
         //Recarga la pagina despues de 1.5 segs
-        window.location.reload();
+        //window.location.reload();
       }, 1500);
+      // Actualizar la lista de productos dinamicamente
+      actualizarListaProductos();
     }
     //se guarda los datos
     guardarAlmacenamientoLocal("productos", productos);
@@ -101,8 +105,10 @@
       mensaje.classList.add("realizado");
       setTimeout(() => {
         mensaje.classList.remove("realizado");
-        window.location.reload();
+        //window.location.reload();
       }, 1500);
+      // Actualizar la lista de productos dinamicamente
+      actualizarListaProductos();
     } else {
       mensaje.classList.add("noExisteError");
       setTimeout(() => {
@@ -138,17 +144,20 @@
         mensaje.classList.add("realizado");
         setTimeout(() => {
           mensaje.classList.remove("realizado");
-          window.location.reload();
+          //window.location.reload();
         }, 1500);
+        // Actualizar la lista de productos dinamicamente
+        actualizarListaProductos();
       }
       guardarAlmacenamientoLocal("productos", productos);
     });
+    // Funcion para actualizar la lista de productos dinamicamente
 
 
 //})
     // mostrar productos
-window.addEventListener("load", () => {
-  const productoEd = document.getElementById("productoEditar");
+  function actualizarListaProductos() {
+   const productoEd = document.getElementById("productoEditar");
   const productoEl = document.getElementById("productoEliminar");
   for (let i = 0; i < productos.length; i++) {
     productoEd.innerHTML += `<option>${productos[i].nombre}</option>`;
@@ -164,4 +173,4 @@ window.addEventListener("load", () => {
     
     mostrarProductos.innerHTML += `<div class="contenedorProducto"><img src="${productos[i].imagen}"  class="imagen-producto"><div class="informacion"><p>${productos[i].nombre}</p><p class="precio"><span>Precio: $${productos[i].valor}</span></p> Existencia: ${productos[i].existencias}<p></p></div></div>`;
   }
-});
+};

@@ -105,7 +105,7 @@ option{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 .contenedorProductos h2 {
@@ -135,9 +135,9 @@ option{
 
 .imagen-producto {
     width: 100%;
-    height: 50%;
+    height: 57%;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .informacion {
