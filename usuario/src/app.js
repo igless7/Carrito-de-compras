@@ -100,7 +100,4 @@ button_cerrar.addEventListener("click", () =>{
         }
         
         
-    })
-    function visualizarproductos(){
-
-    }
+    })    
