@@ -97,7 +97,5 @@ button_cerrar.addEventListener("click", () =>{
             productos[i].id
           }" class="bi bi-plus-lg"></i>
             </div>`;
-        }
-        
-        
+        }  
     })    
